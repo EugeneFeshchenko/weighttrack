@@ -13,10 +13,15 @@
 
 
   <script src="assets/js/angular.min.js"></script>
+  <script src="assets/js/angular-route.min.js"></script>
+
   <script src="assets/js/ui-bootstrap-tpls-2.2.0.min.js"></script>
   <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
   <script src="weight-data/weight-data.module.js"></script>
   <script src="weight-data/weight-data.component.js"></script>
+  <script src="weight-settings/weight-settings.module.js"></script>
+  <script src="weight-settings/weight-settings.component.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -29,12 +34,12 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="#">PetOne</a>
       </div>
-      <button type="button" class="btn btn-default navbar-btn">Настройки</button>
+       <a class="btn btn-default navbar-btn" href="#!/settings">Настройки</a>
     </div>
   </nav>
 
   <div id="content">
-    <weight-data></weight-data>
+    <div ng-view></div>
   </div>
 
 </body>
