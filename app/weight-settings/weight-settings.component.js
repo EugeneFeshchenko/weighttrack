@@ -1,7 +1,7 @@
 angular.
   module('weightSettings').
   component('weightSettings', {
-    template: 'Some settings here',
+    templateUrl: 'weight-settings/weight-settings.template.html',
     controller: ['$routeParams',
       function settingsController($routeParams) {
         
