@@ -7,20 +7,20 @@
 
   <table class="table">
     <thead>
-     <tr>
-       <th>Дата</th>
-       <th>Вес</th>
-       <th>Комментарий</th>
+      <tr>
+        <th>Дата</th>
+        <th>Вес</th>
+        <th>Комментарий</th>
      </tr>
-   </thead>
-        <tbody>
-          <tr ng-repeat='record in $ctrl.records'>
-            <td>{{ record.date|date }}</td>
-            <td>{{ record.weight }}</td>
-            <td>{{ record.notes }}</td>
-          </tr>
-        </tbody>
-      </table>
+    </thead>
+  <tbody>
+    <tr ng-repeat='record in $ctrl.records'>
+      <td>{{ record.date|date }}</td>
+      <td>{{ record.weight }}</td>
+      <td>{{ record.notes }}</td>
+    </tr>
+  </tbody>
+</table>
     </div>
 
     <div class="panel panel-default">
