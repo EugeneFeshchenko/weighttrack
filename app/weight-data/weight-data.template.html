@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-body">Chart goes here</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Исторические данные</div>
+
+  <table class="table">
+    <thead>
+     <tr>
+       <th>Дата</th>
+       <th>Вес</th>
+       <th>Комментарий</th>
+     </tr>
+   </thead>
+        <tbody>
+          <tr ng-repeat='record in $ctrl.records'>
+            <td>{{ record.date|date }}</td>
+            <td>{{ record.weight }}</td>
+            <td>{{ record.notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Текущий вес:</span>
+            <input type="number" step="0.01" ng-model="currentWeight" class="form-control" aria-describedby="basic-addon1">
+          </div>
+        </form>
+      </div>
+    </div>

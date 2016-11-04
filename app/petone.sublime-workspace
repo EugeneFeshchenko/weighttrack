@@ -1,0 +1,352 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\nmysqldump \\\n  -hufgtoolsprod.cyo1emfchgqq.us-east-1.rds.amazonaws.com \\\n  -P3306 \\\n  -udjango \\\n  -pEyg2ad0Moc6Feuj0D \\\n  ufgtools \\\n  | gzip > ./ufgtools-data.sql.gz\n\npg_dump -C -h ufgtoolspg.cyo1emfchgqq.us-east-1.rds.amazonaws.com -U postgres ufgtoolspg > pg_dump.sql\n\npoirunqwe\na21031963\n\n098-038-49-70\n\n096-643-57-99 украинская 3",
+			"settings":
+			{
+				"buffer_size": 335,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "VPN credentials (this IP is whitelisted):*\nPPTP host: 192.241.252.177\nuser: efeshchenko\npass: b7FZsbuwfvVw7UT\n\n*Asterisk Server:*\nhost: efeshchenko@69.28.211.142\npass: gJCxAUFp4ZzH7Wv\n\n\n/var/log/cdr_daemon.log\n\n0 19 * * * find /var/spool/asterisk/monitor/*.wav -mtime +0 -delete\n\nAUDIO_DIR = '/var/spool/asterisk/monitor/'\ncalls = get_database_data()\nfor call_info in calls:\n    if call_info['recordingfile']:\n        file_name = call_info['recordingfile'].split('-')[-1]\n        file_path = os.path.join(AUDIO_DIR, file_name)\n        print call_info['calldate'], call_info['uniqueid'], os.path.exists(file_path)\n    else:\n        print call_info['calldate'], call_info['uniqueid'], 'recordingfile is empty'\n\n\n#SELECT uniqueid, calldate, COUNT(*) c FROM cdr GROUP BY uniqueid HAVING c > 1 order by calldate desc\nSELECT * FROM cdr WHERE uniqueid = 1474223730.101730;\n\nfile_names = [s for s in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, s))]\nfile_names.sort(key=lambda s: os.path.getmtime(os.path.join(dir_path, s)))\nfile_names = ['.'.join(x.split('.')[:-1]) for x in file_names]\n\ndb_data = get_database_data()\ndb_names = [x['recordingfile'].split('-')[-1] for x in db_data]\ndb_names = ['.'.join(x.split('.')[:-1]) for x in db_names]",
+			"settings":
+			{
+				"buffer_size": 1250,
+				"line_ending": "Unix",
+				"name": "VPN credentials (this IP is whitelisted):*"
+			}
+		},
+		{
+			"contents": "Есть общая большая карта разделенная на секторы. \nВ каждом секторе - свой набор ресурсов и специфика климата.\nМенталитет, промышленность, уровень развития, религию выбирает игрок сам себе на основе совьего участка. \n\nИзначальный кредит каждому игроку - 100 баллов\n\nИгроки ходят по очереди. \nВ свой ход игрок может:\n Если не в союзе:\n   - Предложить другому игроку основать союз.\n   - Попроситься в другой союз\n   - Сделать изменения чтобы подойти под условия вхождения в союз\n Если в союзе:\n - Предложить другой стране вступить в союз\n - Выйти из союза\n\nЧтобы основать союз:\n - То же что и войти\n\nЧтобы войти в союз:\n - Нужно соответствовать 5ти любым критериям соответствия\n - При вхождении в союз то игроку +10 бал за каждого союзника\n\nЧтобы выйти из союза:\n - Нужно заплатить штраф 10 баллов за каждого союзника\n\n\n Штравные очки за встревание в не свою очередь.\n ",
+			"settings":
+			{
+				"buffer_size": 866,
+				"line_ending": "Unix",
+				"name": "Есть общая большая карта разделенная на секторы."
+			}
+		},
+		{
+			"contents": "Eugene, here’re creds to SLI FTP for this ticket #853\n\nHere is the FTP:\nftp1.sli-systems.com\n- Username: bedroomfurniturediscounts\n- Password: to8ezihepaqo",
+			"settings":
+			{
+				"buffer_size": 155,
+				"line_ending": "Unix",
+				"name": "Eugene, here’re creds to SLI FTP for this ticket #"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 272.0,
+		"last_filter": "Package Control: i",
+		"selected_items":
+		[
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/efe/source/pet"
+	],
+	"file_history":
+	[
+		"/home/efe/source/pet/index.html",
+		"/home/efe/source/pet/app.js",
+		"/run/user/1000/gvfs/mtp:host=%5Busb%3A003%2C002%5D/Внутренняя память/Лили.txt",
+		"/home/efe/НОВАКОМ",
+		"/home/efe/Загрузки/asterisk_server_69.28.211.142/asterisk_server_69.28.211.142/root/cdr3/cdr_live/ufg_scanwav.py",
+		"/home/efe/Загрузки/asterisk_server_69.28.211.142/asterisk_server_69.28.211.142/crontab.ls-a",
+		"/home/efe/source/ufgtools_bundle.pem",
+		"/home/efe/source/ufgtools.key",
+		"/home/efe/source/AddTrustExternalCARoot.crt",
+		"/home/efe/source/public.pem",
+		"/home/efe/source/www_ufgtools_com.crt",
+		"/home/efe/source/COMODORSADomainValidationSecureServerCA.crt",
+		"/home/efe/source/COMODORSAAddTrustCA.crt",
+		"/media/efe/CA6AA6376AA61FE5/games/111.txt",
+		"/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C002%5D/Внутренняя память/списко.txt",
+		"/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C003%5D/Внутренняя память/Эмоции.txt",
+		"/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C003%5D/Внутренняя память/Полярности.txt",
+		"/home/efe/source/ufgtools/apps/orders/views/leads/browse.py",
+		"/home/efe/source/ufgtools/ufgtools/urls.py",
+		"/run/user/1000/gvfs/mtp:host=%5Busb%3A001%2C003%5D/Внутренняя память/кино.txt",
+		"/home/efe/.ssh/id_rsa.pub"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"true",
+			"false",
+			"leads/se",
+			"history"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"True",
+			"False"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								335,
+								335
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								222,
+								222
+							]
+						],
+						"settings":
+						{
+							"auto_name": "VPN credentials (this IP is whitelisted):*",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								263,
+								263
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Есть общая большая карта разделенная на секторы.",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Eugene, here’re creds to SLI FTP for this ticket #",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "petone.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 174.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

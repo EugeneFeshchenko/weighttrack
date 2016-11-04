@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en" ng-app="weightTrackApp">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
+  <script src="assets/js/angular.min.js"></script>
+  <script src="assets/js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+  <script src="app.module.js"></script>
+  <script src="weight-data/weight-data.module.js"></script>
+  <script src="weight-data/weight-data.component.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">PetOne</a>
+      </div>
+      <button type="button" class="btn btn-default navbar-btn">Настройки</button>
+    </div>
+  </nav>
+
+  <div id="content">
+    <weight-data></weight-data>
+  </div>
+
+</body>
+</html>
