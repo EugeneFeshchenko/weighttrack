@@ -3,24 +3,24 @@
   <div class="panel-body">
     <label for="basic-url">Вес</label>
   	<div class="input-group">
-      <span class="input-group-addon" id="basic-addon3">Текущий</span>
-      <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+      <span class="input-group-addon">Текущий</span>
+      <input type="number" class="form-control" ng-model="$ctrl.start_weight">
     </div>
     <br/>
     <div class="input-group">
-      <span class="input-group-addon" id="basic-addon4">Целевой</span>
-      <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon4">
+      <span class="input-group-addon">Целевой</span>
+      <input type="number" class="form-control" ng-model="$ctrl.target_weight">
     </div>
     <br/>
     <label for="basic-url">Период</label>
   	<div class="input-group">
-      <span class="input-group-addon" id="basic-addon4">Начало</span>
-      <input type="date" class="form-control" id="basic-url" aria-describedby="basic-addon4">
+      <span class="input-group-addon">Начало</span>
+      <input type="date" class="form-control" ng-model="$ctrl.start_date">
     </div>
     <br/>
     <div class="input-group">
-      <span class="input-group-addon" id="basic-addon5">Конец</span>
-      <input type="date" class="form-control" id="basic-url" aria-describedby="basic-addon5">
+      <span class="input-group-addon">Конец</span>
+      <input type="date" class="form-control" ng-model="$ctrl.end_date">
     </div>
 
   </div><!--panel-body-->
@@ -32,22 +32,22 @@
   <table class="table table-condensed">
     <tr>
       <td>Разница Веса</td>
-      <td>15 кг</td>
+      <td><b>{{ $ctrl.target_weight-$ctrl.start_weight|number:2 }}</b> кг</td>
     </tr>
     <tr>
       <td>Длительность</td>
-      <td>60 дней</td>
+      <td><b>{{ ($ctrl.end_date-$ctrl.start_date)/1000/60/60/24|number:0 }}</b> дней</td>
     </tr>
     <tr>
       <td>Шаг</td>
-      <td>0.1 кг\день</td>
+      <td><b>{{ ($ctrl.target_weight-$ctrl.start_weight)/(($ctrl.end_date-$ctrl.start_date)/1000/60/60/24)|number:2 }}</b> кг\день</td>
     </tr>
   </table>
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-body">
-  	<button>Обновить</button>
-  	<button>Отмена</button>
+  <div class="panel-body settings-buttons">
+  	<a class="btn btn-default btn-lg btn-success" ng-click="$ctrl.save()">Сохранить</a>
+  	<a class="btn btn-default btn-lg btn-warning" ng-click="$ctrl.cancel()">Отмена</a>
   </div>
 </div>
