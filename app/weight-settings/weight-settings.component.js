@@ -27,6 +27,7 @@ angular.
       	  params['dates']['start'] = this.start_date.toString();
       	  params['dates']['end'] = this.end_date.toString();
       	  localStorage['params'] = JSON.stringify(params);
+      	  calculate_records();
       };
  
       this.cancel = function(){
@@ -36,6 +37,25 @@ angular.
         this.end_date = new Date(params['dates']['end']);
       }
 
-      }
-    ]
-  });
+      var ctrl = this;
+      calculate_records = function(){
+      	var period_length = (ctrl.end_date-ctrl.start_date)/1000/60/60/24;
+      	var step = Math.abs((ctrl.target_weight-ctrl.start_weight)/period_length);
+      	var records = [];
+      	var i = 0;
+      	while (i <= period_length){
+          var date_key = new Date(ctrl.start_date.getFullYear(), 
+          	                      ctrl.start_date.getMonth(),
+          	                      ctrl.start_date.getDate()+i);
+          var node = {'date': date_key,
+                      'planned': (ctrl.start_weight - (step*i)).toFixed(2),
+                      'actual': '',
+                      'note': ''}
+          records.push(node);
+          i++;
+      	};
+      	localStorage['records'] = JSON.stringify(records);
+      };//calculateRecordsEnd;
+    }//controllerEnd;
+   ]
+ });

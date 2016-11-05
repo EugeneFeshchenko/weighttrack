@@ -4,10 +4,7 @@ angular.
     templateUrl:'weight-data/weight-data.template.html',
     controller: ['$http',
       function WeightDataController($http) {
-        var self = this;
-        $http.get('weights.json').then(function(response) {
-          self.records = response.data;
-        });
+        this.records = JSON.parse(localStorage['records']);
         }
       ]
   });

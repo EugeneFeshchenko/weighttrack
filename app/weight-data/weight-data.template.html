@@ -10,15 +10,17 @@
     <thead>
       <tr>
         <th>Дата</th>
-        <th>Вес</th>
+        <th>Расчетный Вес</th>
+        <th>Фактический Вес</th>
         <th>Комментарий</th>
      </tr>
     </thead>
   <tbody>
     <tr ng-repeat='record in $ctrl.records'>
-      <td>{{ record.date|date }}</td>
-      <td>{{ record.weight }}</td>
-      <td>{{ record.notes }}</td>
+      <td>{{ record.date|date:'shortDate' }}</td>
+      <td>{{ record.planned }}</td>
+      <td>{{ record.actual }}</td>
+      <td>{{ record.note }}</td>
     </tr>
   </tbody>
 </table>
