@@ -10,3 +10,8 @@
 .settings-buttons{
 	text-align: center;
 }
+
+.weight-data{
+    max-height:300px;
+    overflow: auto;
+}

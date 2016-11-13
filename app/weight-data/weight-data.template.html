@@ -3,7 +3,7 @@
   <div class="panel-body"></div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-default weight-data">
   <div class="panel-heading">Исторические данные</div>
 
   <table class="table table-condensed">
@@ -16,7 +16,7 @@
      </tr>
     </thead>
   <tbody>
-    <tr ng-repeat='record in $ctrl.records'>
+    <tr ng-repeat='record in $ctrl.records' >
       <td>{{ record.date|date:'shortDate' }}</td>
       <td>{{ record.planned }}</td>
       <td>{{ record.actual }}</td>
@@ -31,8 +31,9 @@
         <form>
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">Текущий вес:</span>
-            <input type="number" step="0.01" ng-model="currentWeight" class="form-control" aria-describedby="basic-addon1">
+            <input type="number" step="0.01" ng-model="$ctrl.currentWeight" class="form-control">
           </div>
+          <button class="btn btn-default" ng-click="$ctrl.setWeight()">Ok</button>
         </form>
       </div>
     </div>
