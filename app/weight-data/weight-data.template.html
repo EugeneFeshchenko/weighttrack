@@ -28,8 +28,8 @@
         ng-class="{'success': record.planned >= record.actual, 
                    'warning': record.planned < record.actual}">
       <td>{{ record.date|date:'shortDate' }}</td>
-      <td>{{ record.planned }}</td>
-      <td><span ng-if="record.actual">{{ record.actual }}</span></td>
+      <td>{{ record.planned|number: 2 }}</td>
+      <td><span ng-if="record.actual">{{ record.actual|number:2 }}</span></td>
       <td>{{ record.note }}</td>
     </tr>
   </tbody>

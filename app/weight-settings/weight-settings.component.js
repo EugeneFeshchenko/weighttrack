@@ -28,6 +28,7 @@ angular.
       	  params['dates']['end'] = this.end_date.toString();
       	  localStorage['params'] = JSON.stringify(params);
       	  calculate_records();
+          alert('Сохранено');
       };
  
       this.cancel = function(){
@@ -35,6 +36,7 @@ angular.
         this.target_weight = params['weight']['target'];
         this.start_date = new Date(params['dates']['start']);
         this.end_date = new Date(params['dates']['end']);
+        alert('Отменено');
       }
 
       var ctrl = this;
