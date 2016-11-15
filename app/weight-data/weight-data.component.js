@@ -27,6 +27,7 @@ angular.
               localStorage['records'] = JSON.stringify(this.records);
             }
           }
+          this.updateChart();
         };
 
         this.setRandomValues = function(){
