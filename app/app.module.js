@@ -1,6 +1,7 @@
 angular.module('weightTrackApp', [
  'ngRoute',
  'weightData',
- 'weightSettings',
+ 'settings',
  'chart.js',
+ 'chart',
 ]);

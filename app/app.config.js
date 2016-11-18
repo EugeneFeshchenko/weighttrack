@@ -9,7 +9,10 @@ angular.
           template: '<weight-data></weight-data>'
         }).
         when('/settings', {
-          template: '<weight-settings></weight-settings>'
+          template: '<settings></settings>'
+        }).
+         when('/chart', {
+          template: '<chart></chart>'
         }).
         otherwise('/index');
     }

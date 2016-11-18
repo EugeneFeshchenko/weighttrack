@@ -2,7 +2,7 @@
   <div class="panel-heading">Исходные данные</div>
   <div class="panel-body">
     <label for="basic-url">Вес</label>
-  	<div class="input-group">
+    <div class="input-group">
       <span class="input-group-addon">Начальный</span>
       <input type="number" class="form-control" ng-model="$ctrl.start_weight">
     </div>
@@ -13,7 +13,7 @@
     </div>
     <br/>
     <label for="basic-url">Период</label>
-  	<div class="input-group">
+    <div class="input-group">
       <span class="input-group-addon">Начало</span>
       <input type="date" class="form-control" ng-model="$ctrl.start_date">
     </div>
@@ -22,10 +22,9 @@
       <span class="input-group-addon">Конец</span>
       <input type="date" class="form-control" ng-model="$ctrl.end_date">
     </div>
-
-  </div><!--panel-body-->
+  </div>
+  <!--panel-body-->
 </div>
-
 <div class="panel panel-default">
   <div class="panel-heading">Расчетные данные</div>
   <div class="panel-body"></div>
@@ -44,10 +43,9 @@
     </tr>
   </table>
 </div>
-
 <div class="panel panel-default">
   <div class="panel-body settings-buttons">
-  	<a class="btn btn-default btn-lg btn-success" ng-click="$ctrl.save()">Сохранить</a>
-  	<a class="btn btn-default btn-lg btn-warning" ng-click="$ctrl.cancel()">Отмена</a>
+    <a class="btn btn-default btn-lg btn-success" ng-click="$ctrl.save()">Сохранить</a>
+    <a class="btn btn-default btn-lg btn-warning" ng-click="$ctrl.cancel()">Отмена</a>
   </div>
 </div>
