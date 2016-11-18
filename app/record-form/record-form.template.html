@@ -1,23 +1,33 @@
 <div class="panel panel-default">
+  <div class="panel-heading">Редактировать запись</div>
   <div class="panel-body">
     <form>
       <div class="input-group">
-        <span class="input-group-addon" id="basic-addon1">Текущий вес:</span>
+        <span class="input-group-addon">Дата:</span>
+        <input type="date" ng-model="$ctrl.date" class="form-control">
+      </div>
+      <br/>
+      <div class="input-group">
+        <span class="input-group-addon">Текущий вес:</span>
         <input type="number" step="0.01" ng-model="$ctrl.currentWeight" class="form-control">
-        <span class="input-group-btn">          
-          <button class="btn btn-default" ng-click="$ctrl.setWeight()">Ok</button>
-        </span>
+      </div>
+      <br/>
+      <div class="input-group">
+        <span class="input-group-addon">Плановый:</span>
+        <input type="text" ng-model="$ctrl.plannedWeight" disabled="disabled" class="form-control">
       </div>
       <br/>
       <div class="input-group">
         <span class="input-group-addon">Комментарий:</span>
-        <input type="text" ng-model="$ctrl.currentComment" class="form-control">
-        <span class="input-group-btn">
-          <button class="btn btn-default" ng-click="$ctrl.setComment()">Ok</button>
-        </span>
+        <input type="text" ng-model="$ctrl.note" class="form-control">
       </div>
-      <br/>
-      <button class="btn btn-default" ng-click="$ctrl.setRandomValues()">Random</button>
     </form>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body settings-buttons">
+    <a class="btn btn-default btn-lg btn-success" ng-click="$ctrl.saveRecord()">Сохранить</a>
+    <a class="btn btn-default btn-lg btn-warning" ng-click="$ctrl.cancel()">Отмена</a>
   </div>
 </div>

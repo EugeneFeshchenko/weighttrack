@@ -10,8 +10,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="record in $ctrl.records | orderBy:'':true" ng-class="{'success': record.planned >= record.actual,
-        'warning': record.planned < record.actual}">
+      <tr ng-repeat="record in $ctrl.records | orderBy:'':true" 
+          ng-class="{'success': record.planned >= record.actual,
+                     'warning': record.planned < record.actual}"
+          ng-if="record.date<=$ctrl.today">
         <td>{{ record.date|date:'shortDate' }}</td>
         <td>{{ record.planned|number: 2 }}</td>
         <td><span ng-if="record.actual">{{ record.actual|number:2 }}</span></td>
