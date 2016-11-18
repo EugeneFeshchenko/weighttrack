@@ -3,15 +3,6 @@
 	text-align: center;
 }
 
-.weight-data{
-    max-height:300px;
-    overflow: auto;
-}
-
 .navbar{
 	border-radius: 0;
-}
-
-.navbar-default .navbar-brand{
-    color: #00bc8c;
 }

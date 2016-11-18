@@ -4,4 +4,5 @@ angular.module('weightTrackApp', [
  'settings',
  'chart.js',
  'chart',
+ 'recordForm',
 ]);

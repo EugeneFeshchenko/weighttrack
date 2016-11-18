@@ -1,19 +1,22 @@
 angular.
-  module('weightTrackApp').
-  config(['$locationProvider', '$routeProvider',
+module('weightTrackApp').
+config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
-      $locationProvider.hashPrefix('!');
+        $locationProvider.hashPrefix('!');
 
-      $routeProvider.
+        $routeProvider.
         when('/index', {
-          template: '<weight-data></weight-data>'
+            template: '<weight-data></weight-data>'
         }).
         when('/settings', {
-          template: '<settings></settings>'
+            template: '<settings></settings>'
         }).
-         when('/chart', {
-          template: '<chart></chart>'
+        when('/chart', {
+            template: '<chart></chart>'
+        }).
+        when('/record', {
+            template: '<record-form></record-form>'
         }).
         otherwise('/index');
     }
-  ]);
+]);
