@@ -1,7 +1,16 @@
+@font-face {
+  font-family: 'Roboto';
+      src: url("../fonts/Roboto-Regular.ttf") /* TTF file for CSS3 browsers */
+}
+
 .settings-buttons {
   text-align: center;
 }
 
 .navbar {
   border-radius: 0;
+}
+
+body{
+	font-family: 'Roboto';
 }
