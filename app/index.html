@@ -4,23 +4,23 @@
 <head>
   <meta charset="utf-8">
   <title>PetOne</title>
-
   <meta name="description" content="PetOne">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0" />
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/snap/snap.css">
+  <link rel="stylesheet" href="assets/snap/angular-snap.min.css">
+  <link rel="stylesheet" href="assets/snap/angular-snap-only.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
   <script src="assets/js/angular.min.js"></script>
   <script src="assets/js/angular-route.min.js"></script>
   <script src="assets/js/ui-bootstrap-tpls-2.2.0.min.js"></script>
   <script src="assets/js/Chart.bundle.min.js"></script>
   <script src="assets/js/angular-chart.min.js"></script>
-
+  <script src="assets/snap/snap.min.js"></script>
+  <script src="assets/snap/angular-snap.min.js"></script>
   <script src="app.module.js"></script>
   <script src="app.config.js"></script>
-
   <script src="weight-data/weight-data.module.js"></script>
   <script src="weight-data/weight-data.component.js"></script>
   <script src="settings/settings.module.js"></script>
@@ -35,26 +35,45 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">PetOne</a>
+  <div snap-drawer="left">
+    <h4>Меню:</h4>
+    <ul class="menu">
+      <li>
+        <a class="btn btn-default" href="#">
+          <span class="glyphicon glyphicon-calendar" aria-hidden="true"> Табличка</span>
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-default" href="#!/chart">
+          <span class="glyphicon glyphicon-stats" aria-hidden="true"> График</span>
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-default" href="#!/record">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"> Редактировать</span>
+        </a>
+      </li>
+      <li>
+        <a class="btn btn-default" href="#!/settings">
+          <span class="glyphicon glyphicon-cog" aria-hidden="true"> Настройки</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div snap-content snap-opt-disable="'right'" id="snap-content">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed custom" snap-toggle="left">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">PetOne</a>
+        </div>
       </div>
-      <a class="btn btn-default navbar-btn" href="#">
-        <span class="glyphicon glyphicon-calendar" aria-hidden="true"> Табличка</span>
-      </a>
-      <a class="btn btn-default navbar-btn" href="#!/chart">
-        <span class="glyphicon glyphicon-stats" aria-hidden="true"> График</span>
-      </a>
-      <a class="btn btn-default navbar-btn" href="#!/record">
-        <span class="glyphicon glyphicon-pencil" aria-hidden="true"> Редактировать</span>
-      </a>
-      <a class="btn btn-default navbar-btn" href="#!/settings">
-        <span class="glyphicon glyphicon-cog" aria-hidden="true"> Настройки</span>
-      </a>
-    </div>
-  </nav>
-  <div id="content">
+    </nav>
     <div ng-view></div>
   </div>
 </body>

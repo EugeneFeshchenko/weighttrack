@@ -7,10 +7,23 @@
   text-align: center;
 }
 
-.navbar {
-  border-radius: 0;
-}
-
 body{
 	font-family: 'Roboto';
+}
+
+.snap-drawer{
+    padding: 0 20px;
+}
+
+.menu li{
+    margin: 5px 0px;
+}
+
+.navbar-toggle.custom{
+    float: left;
+    display: block;
+}
+
+#snap-content{
+    background-color: #222222;
 }
